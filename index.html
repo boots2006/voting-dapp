@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <h2>Voting dApp</h2>
+
+    <button onclick="vote('A')">Vote A</button>
+    <button onclick="vote('B')">Vote B</button>
+
+    <p id="result"></p>
+
+    <script>
+      let votes = { A: 0, B: 0 };
+
+      function vote(option) {
+        votes[option]++;
+        document.getElementById("result").innerText =
+          "A: " + votes.A + " | B: " + votes.B;
+      }
+    </script>
+
+  </body>
+</html>
